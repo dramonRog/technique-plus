@@ -1,0 +1,45 @@
+.orange-line {
+  height: 4px;
+  background-color: #ff5733;
+  margin-bottom: 20px;
+}
+
+.employees-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.employees-section table,
+.employees-section th,
+.employees-section td {
+  border: 1px solid #ddd;
+}
+
+.employees-section th,
+.employees-section td {
+  padding: 15px;
+  text-align: left;
+}
+
+.employees-section th {
+  background-color: #444;
+}
+
+.employees-section td {
+  background-color: #333;
+}
+.address-section img {
+  margin-top: 35px;
+}
+
+@media (max-width: 768px) {
+  .info-about-container section {
+    padding: 10px;
+    text-align: left;
+  }
+
+  .info-about-container h2 {
+    text-align: center;
+  }
+}

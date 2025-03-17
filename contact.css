@@ -1,0 +1,169 @@
+.contact-section h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  color: #aaa;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-size: 20px;
+  text-align: left;
+  width: 80%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 80%;
+  padding: 10px;
+  font-size: 15px;
+  border-width: 2px;
+  border-radius: 5px;
+}
+.contact-form textarea {
+  max-width: 90%;
+}
+
+.contact-form .submit-btn {
+  padding: 10px 20px;
+  margin-top: 25px;
+  background-color: #ff5733;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contact-form .submit-btn:hover {
+  opacity: 90%;
+  transition: 0.3s ease;
+}
+
+.error-message {
+  color: red;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+}
+
+input:invalid,
+textarea:invalid {
+  border-color: red;
+}
+
+.success-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.success-message {
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+.success-overlay.show {
+  display: flex;
+  opacity: 1;
+}
+
+.success-overlay .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.success-overlay .close-btn:hover {
+  color: #f00;
+}
+
+.address-section {
+  background-color: #444;
+  padding: 40px;
+}
+
+.address-section h2 {
+  margin-bottom: 20px;
+}
+
+.address-section address {
+  font-style: normal;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .contact-section h2 {
+    margin-bottom: 15px;
+  }
+
+  .contact-section p {
+    margin-bottom: 20px;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .contact-form label {
+    width: 100%;
+  }
+
+  .contact-form input {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .contact-form textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .contact-form .submit-btn {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .address-section {
+    padding: 30px 15px;
+    width: 100%;
+  }
+
+  .address-section address {
+    margin-top: 15px;
+  }
+
+  .address-section img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+}

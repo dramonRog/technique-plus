@@ -1,0 +1,376 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.profile-container h2,
+.profile-container h3 {
+  color: #ff5733;
+}
+
+.profile-container p {
+  margin-bottom: 40px;
+}
+
+.profile-actions button,
+#logoutBtn {
+  background-color: #ff5733;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: opacity 0.5s ease;
+}
+
+.profile-actions button:hover,
+#logoutBtn:hover {
+  opacity: 80%;
+}
+.modal {
+  z-index: 103;
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #2e2e2e;
+  width: 30%;
+  position: relative;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: left;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  box-sizing: border-box; 
+}
+
+.close {
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content label {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.modal-content input {
+  padding: 12px;
+  font-size: 1em;
+  background-color: #444;
+  color: #ccc;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content input:focus {
+  background-color: #555;
+}
+
+.modal-content button {
+  background-color: #ff5733;
+  border: none;
+  padding: 14px 35px;
+  margin-top: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: opacity 0.5s ease;
+}
+
+.modal.show {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.why-register,
+.data-security {
+  background: linear-gradient(135deg, #2e2e2e, #3e3e3e);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  color: #eee;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-register:hover,
+.data-security:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.why-register h3,
+.data-security h3 {
+  color: #ff5733;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.why-register h3::after,
+.data-security h3::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #ff5733;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.why-register p,
+.data-security p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #d1d1d1;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+.why-register ul,
+.data-security ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.why-register li,
+.data-security li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.why-register li::before,
+.data-security li::before {
+  content: "✔";
+  color: #ff5733;
+  font-size: 18px;
+  margin-top: 2px;
+}
+
+.why-register li strong,
+.data-security li strong {
+  color: #fff;
+}
+
+.error-message {
+  color: red;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  margin-bottom: 15px;
+}
+
+input:invalid,
+textarea:invalid {
+  border-color: red;
+}
+
+.success-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.success-message {
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+.success-overlay.show {
+  display: flex;
+  opacity: 1;
+}
+
+.success-overlay .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.success-overlay .close-btn:hover {
+  color: #f00;
+}
+
+@media (min-width: 1200px) {
+  .modal.show {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+  .modal-content {
+    width: 35%;
+  }
+}
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 20px 10px;
+  }
+
+  .profile-container p {
+    margin-bottom: 20px;
+  }
+
+  .profile-actions button,
+  #logoutBtn {
+    padding: 10px 20px;
+  }
+
+  .why-register,
+  .data-security {
+    padding: 15px;
+    margin: 15px 0;
+  }
+
+  .profile-container {
+    padding: 20px 10px;
+  }
+
+  .profile-container p {
+    margin-bottom: 20px;
+  }
+
+  .profile-actions button,
+  #logoutBtn {
+    padding: 10px 20px;
+  }
+
+  .why-register,
+  .data-security {
+    padding: 15px;
+    margin: 15px 0;
+  }
+
+  .why-register ul,
+  .data-security ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .why-register li,
+  .data-security li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .why-register li strong,
+  .data-security li strong {
+    margin-bottom: 5px;
+    color: #fff;
+  }
+
+  .modal-content {
+    width: 60%;
+    padding: 20px;
+  }
+
+  .modal-content form {
+    gap: 15px;
+  }
+
+  .modal-content input {
+    padding: 10px;
+  }
+
+  .modal-content button {
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .modal-content h2 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .modal-content form {
+    gap: 10px;
+  }
+
+  .modal-content label {
+    margin: 5px;
+  }
+
+  .modal-content input {
+    padding: 10px;
+  }
+
+  .modal-content button {
+    padding: 10px 20px;
+  }
+
+  .close {
+    top: 5px;
+    right: 10px;
+  }
+
+  .modal {
+    padding-top: 30px;
+  }
+
+  .modal.show {
+    align-items: start;
+  }
+}
+
+.profile-img-user {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+}
